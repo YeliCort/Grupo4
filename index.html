@@ -1,13 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-   <p>Para trabajar tú solo en tu propia rama en grupo4, puedes seguir este flujo típico de comandos.git </p> 
-</body>
-</html>
+    <title>Google Pixel Buds Pro - Google Store</title>
 
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Tu archivo de estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ============================================
+         HEADER (Encabezado de navegación)
+         Usamos <header> porque es la cabecera principal
+    ============================================ -->
+    <header class="main-header">
+        <div class="container header-container">
+
+            <!-- Logo de Google -->
+            <div class="logo">
+                <img src="assets/google-logo.svg" alt="Google Logo">
+            </div>
+
+            <!-- Navegación principal -->
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li><a href="#">Phones</a></li>
+                    <li><a href="#" class="active">Earbuds</a></li>
+                    <li><a href="#">Watches</a></li>
+                    <li><a href="#">Smart Home</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Subscriptions</a></li>
+                </ul>
+            </nav>
+
+            <!-- Iconos de la derecha (búsqueda, ayuda, carrito, perfil) -->
+            <div class="header-actions">
+                <button aria-label="Buscar">
+                    <img src="assets/search-icon.svg" alt="">
+                </button>
+                <button aria-label="Ayuda">
+                    <img src="assets/help-icon.svg" alt="">
+                </button>
+                <button aria-label="Carrito">
+                    <img src="assets/cart-icon.svg" alt="">
+                </button>
+                <button aria-label="Perfil de usuario">
+                    <img src="assets/user-icon.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================
+         MAIN (Contenido principal de la página)
+         Solo debe haber UN <main> por página
+    ============================================ -->
+    <main class="product-page">
+
+        <!-- Enlace para volver atrás -->
+        <div class="container">
+            <a href="#" class="back-link">
+                ← See product details
+            </a>
+        </div>
+
+        <!-- ============================================
+             SECCIÓN DEL PRODUCTO
+             Usamos <section> para agrupar contenido relacionado
+        ============================================ -->
+        <section class="product-section">
+            <div class="container product-container">
+
+                <!-- ===== COLUMNA IZQUIERDA: Galería de imágenes ===== -->
+                <div class="product-gallery">
+
+                    <!-- Miniaturas verticales (selector de ángulos) -->
+                    <div class="thumbnails">
+                        <button class="thumb-btn active" aria-label="Vista frontal">
+                            <img src="assets/thumb-front.png" alt="">
+                        </button>
+                        <button class="thumb-btn" aria-label="Vista lateral">
+                            <img src="assets/thumb-side.png" alt="">
+                        </button>
+                        <button class="thumb-btn" aria-label="Vista superior">
+                            <img src="assets/thumb-top.png" alt="">
+                        </button>
+                        <button class="thumb-btn" aria-label="Vista del estuche">
+                            <img src="assets/thumb-case.png" alt="">
+                        </button>
+                    </div>
+
+                    <!-- Imagen principal del producto -->
+                    <figure class="main-image">
+                        <img src="assets/pixel-buds-pro-main.png"
+                            alt="Google Pixel Buds Pro en color azul dentro del estuche blanco">
+                    </figure>
+                </div>
+
+                <!-- ===== COLUMNA DERECHA: Información del producto ===== -->
+                <div class="product-info">
+
+                    <!-- Encabezado del producto -->
+                    <header class="product-header">
+                        <h1 class="product-title">Google Pixel Buds Pro</h1>
+                        <p class="product-category">Music & Sound</p>
+                    </header>
+
+                    <!-- Precio principal -->
+                    <div class="price-section">
+                        <p class="price">229 €</p>
+                    </div>
+
+                    <!-- Selector de color -->
+                    <div class="color-selector">
+                        <p class="selector-label">Choose a color</p>
+                        <div class="color-options" role="radiogroup" aria-label="Seleccionar color">
+                            <!-- Cada color es un botón radio -->
+                            <label class="color-option">
+                                <input type="radio" name="color" value="blue" checked>
+                                <span class="color-circle" style="background-color: #8AB4F8;" title="Azul"></span>
+                            </label>
+                            <label class="color-option">
+                                <input type="radio" name="color" value="white">
+                                <span class="color-circle" style="background-color: #F5F5F5;" title="Blanco"></span>
+                            </label>
+                            <label class="color-option">
+                                <input type="radio" name="color" value="black">
+                                <span class="color-circle" style="background-color: #3C4043;" title="Negro"></span>
+                            </label>
+                            <label class="color-option">
+                                <input type="radio" name="color" value="gray">
+                                <span class="color-circle" style="background-color: #DADCE0;" title="Gris"></span>
+                            </label>
+                            <label class="color-option">
+                                <input type="radio" name="color" value="green">
+                                <span class="color-circle" style="background-color: #D4E157;" title="Verde"></span>
+                            </label>
+                            <label class="color-option">
+                                <input type="radio" name="color" value="coral">
+                                <span class="color-circle" style="background-color: #FF8A65;" title="Coral"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Caja de compra -->
+                    <div class="purchase-box">
+                        <p class="price">229 €</p>
+
+                        <div class="quantity-selector">
+                            <button class="qty-btn" aria-label="Disminuir cantidad">-</button>
+                            <input type="number" value="1" min="1" max="10" aria-label="Cantidad">
+                            <button class="qty-btn" aria-label="Aumentar cantidad">+</button>
+                        </div>
+
+                        <button class="add-to-cart-btn">
+                            Add to Cart
+                        </button>
+
+                        <!-- Información de envío -->
+                        <div class="delivery-info">
+                            <img src="assets/truck-icon.svg" alt="" class="icon">
+                            <p>Delivers 29 Apr to <a href="#" class="zip-code">08023</a></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================
+         FOOTER (Pie de página)
+    ============================================ -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+
+            <!-- Redes sociales (izquierda) -->
+            <div class="social-links">
+                <a href="#" aria-label="Twitter">
+                    <img src="assets/twitter-icon.svg" alt="">
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <img src="assets/instagram-icon.svg" alt="">
+                </a>
+                <a href="#" aria-label="Facebook">
+                    <img src="assets/facebook-icon.svg" alt="">
+                </a>
+                <a href="#" aria-label="YouTube">
+                    <img src="assets/youtube-icon.svg" alt="">
+                </a>
+                <a href="#" aria-label="TikTok">
+                    <img src="assets/tiktok-icon.svg" alt="">
+                </a>
+            </div>
+
+            <!-- Información legal y país (derecha) -->
+            <div class="footer-info">
+                <div class="country-selector">
+                    <img src="assets/spain-flag.svg" alt="Bandera de España">
+                    <span>Spain</span>
+                </div>
+                <nav class="footer-nav" aria-label="Navegación legal">
+                    <a href="#">Privacy</a>
+                    <a href="#">Google Nest Commitment To Privacy</a>
+                    <a href="#">Sales Terms</a>
+                    <a href="#">Terms of Service</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
