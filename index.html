@@ -1,14 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Pixel Buds Pro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-logo">
+        <span>G</span><span>o</span><span>o</span>gle Store
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Phones</a></li>
+        <li><a href="#" class="active">Earbuds</a></li>
+        <li><a href="#">Watches</a></li>
+        <li><a href="#">Smart Home</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">Subscriptions</a></li>
+      </ul>
+      <div class="nav-icons">
+        <span>🔍</span><span>🌐</span><span>👤</span><span>🛒</span>
+      </div>
+    </nav>
 
+    <a class="back-link" href="#">← See product details</a>
+
+    <div class="product-container">
+      <div class="product-gallery">
+        <div class="thumbnails">
+          <div class="thumb active">🎧</div>
+          <div class="thumb">🔵</div>
+          <div class="thumb">⚫</div>
+          <div class="thumb">📦</div>
+        </div>
+        <div class="main-image">
+          <div class="product-emoji">🎧</div>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <p class="product-category">Music &amp; Sound</p>
+        <h1 class="product-title">Google Pixel Buds Pro</h1>
+        <p class="product-price-top">229 €</p>
+        <hr class="divider" />
+        <div>
+          <p class="color-label">Choose a color</p>
+          <div class="color-swatches">
+            <div class="swatch sky selected"></div>
+            <div class="swatch dark"></div>
+            <div class="swatch sage"></div>
+            <div class="swatch mint"></div>
+            <div class="swatch coral"></div>
+          </div>
+        </div>
+        <p class="price-large">229 €</p>
+        <div class="cart-row">
+          <div class="qty-box">
+            <button onclick="changeQty(-1)">−</button>
+            <input type="number" id="qty" value="1" min="1" max="99" />
+            <button onclick="changeQty(1)">+</button>
+          </div>
+          <button class="btn-cart">Add to Cart</button>
+        </div>
+        <p class="delivery-info">
+          🚚 Delivery: 29 Apr to <a href="#">39003</a>
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <div>🌐 📱 🎵 📘 📷 ▶️</div>
+      <span>Spain</span>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Google Store Conditions</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </footer>
+
+    <script>
+      function changeQty(delta) {
+        const input = document.getElementById("qty");
+        const val = parseInt(input.value) + delta;
+        if (val >= 1 && val <= 99) input.value = val;
+      }
+
+      document.querySelectorAll(".swatch").forEach((swatch) => {
+        swatch.addEventListener("click", () => {
+          document
+            .querySelectorAll(".swatch")
+            .forEach((s) => s.classList.remove("selected"));
+          swatch.classList.add("selected");
+        });
+      });
+
+      document.querySelectorAll(".thumb").forEach((thumb) => {
+        thumb.addEventListener("click", () => {
+          document
+            .querySelectorAll(".thumb")
+            .forEach((t) => t.classList.remove("active"));
+          thumb.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+>>>>>>> origin/main
+</html>
