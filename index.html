@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Google Pixel Buds Pro</title>
-    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <nav>
@@ -33,10 +34,22 @@
           <div class="thumb">🔵</div>
           <div class="thumb">⚫</div>
           <div class="thumb">📦</div>
+    <a class="back-link" href="#">← See product details</a>
+
+    <div class="product-container">
+      <div class="product-gallery">
+        <div class="thumbnails">
+          <div class="thumb active">🎧</div>
+          <div class="thumb">🔵</div>
+          <div class="thumb">⚫</div>
+          <div class="thumb">📦</div>
         </div>
         <div class="main-image">
           <div class="product-emoji">🎧</div>
+        <div class="main-image">
+          <div class="product-emoji">🎧</div>
         </div>
+      </div>
       </div>
 
       <div class="product-info">
@@ -48,26 +61,34 @@
           <p class="color-label">Choose a color</p>
           <div class="color-swatches">
             <div class="swatch sky selected"></div>
+            <div class="swatch porcelain"></div>
             <div class="swatch dark"></div>
-            <div class="swatch sage"></div>
-            <div class="swatch mint"></div>
+            <div class="swatch fog"></div>
+            <div class="swatch lemongrass"></div>
             <div class="swatch coral"></div>
           </div>
         </div>
+      <div class="purchase-card">
         <p class="price-large">229 €</p>
+        <hr class="divider" />
+        
         <div class="cart-row">
-          <div class="qty-box">
-            <button onclick="changeQty(-1)">−</button>
-            <input type="number" id="qty" value="1" min="1" max="99" />
-            <button onclick="changeQty(1)">+</button>
+          <div class="qty-selector-container">
+            <select id="qty" class="qty-select">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
           </div>
           <button class="btn-cart">Add to Cart</button>
         </div>
+
         <p class="delivery-info">
-          🚚 Delivery: 29 Apr to <a href="#">39003</a>
+          🚚 Delivery: 29 Apr to <a href="#">08023</a>
         </p>
       </div>
-    </div>
+    </div> 
+  </div>
 
     <footer>
       <div>🌐 📱 🎵 📘 📷 ▶️</div>
@@ -105,4 +126,6 @@
       });
     </script>
   </body>
+    
+ 
 </html>
