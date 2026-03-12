@@ -26,6 +26,7 @@
    ============================================ */
 
 body {
+Feat/footer
     font-family: var(--font-family);
     color: var(--color-text);
     background-color: var(--color-bg);
@@ -95,6 +96,64 @@ body {
    PÁGINA DE PRODUCTO
    ============================================ */
 
+=======
+  font-family: 'Google Sans', Arial, sans-serif;
+  background: #fff;
+  color: #202124;
+}
+
+/* ── NAV ── */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+}
+
+.nav-logo {
+  font-size: 22px;
+  font-weight: 500;
+  color: #4285f4;
+  letter-spacing: -0.5px;
+}
+.nav-logo span { color: #ea4335; }
+.nav-logo span:nth-child(2) { color: #fbbc04; }
+.nav-logo span:nth-child(3) { color: #34a853; }
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+.nav-links a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #444;
+}
+.nav-links a.active {
+  color: #1a73e8;
+  border-bottom: 2px solid #1a73e8;
+  padding-bottom: 2px;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 16px;
+  font-size: 20px;
+  color: #555;
+}
+.nav-icons span { cursor: pointer; }
+
+/* -- BODYIZQUIERDO: volver con el arrow  -- */
+
+Feat/bodyizquierdo
+/* ── BACK LINK ── */
+ main
 .back-link {
     display: inline-block;
     margin: 24px 0;
