@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
   <!-- HEADER -->
   <header>
     <div class="header-left">
@@ -33,20 +32,25 @@
     </div>
   </header>
 
-    <a class="back-link" href="#">← See product details</a>
+    
+  <a class="back-link" href="#">
+    <img class="icon" src="./images/icons/Arrow-Flecha.svg" alt="arrow" />
+    See product detail
+  </a>
 
-    <div class="product-container">
-      <div class="product-gallery">
-        <div class="thumbnails">
-          <div class="thumb active">🎧</div>
-          <div class="thumb">🔵</div>
-          <div class="thumb">⚫</div>
-          <div class="thumb">📦</div>
-        </div>
-        <div class="main-image">
-          <div class="product-emoji">🎧</div>
-        </div>
+  <div class="product-container">
+    <div class="product-gallery">
+      <div class="thumbnails">
+        <img src="./images/earbuds/earbuds_01.png" class="thumb active" data-image="./images/earbuds/earbuds_01.png">
+        <img src="./images/earbuds/earbuds_02.png" class="thumb" data-image="./images/earbuds/earbuds_02.png">
+        <img src="./images/earbuds/earbuds_03.png" class="thumb" data-image="./images/earbuds/earbuds_03.png">
+        <img src="./images/earbuds/earbuds_04.png" class="thumb" data-image="./images/earbuds/earbuds_04.png">
       </div>
+
+      <div class="main-image">
+        <img id="mainProductImage" src="./images/earbuds/earbuds_01.png" alt="principal">
+      </div>
+    </div>
 
     <div class="product-info">
       <p class="product-category">Music &amp; Sound</p>
@@ -78,15 +82,30 @@
     </div>
   </div>
 
-    <footer>
-      <div>🌐 📱 🎵 📘 📷 ▶️</div>
-      <span>Spain</span>
-      <div class="footer-links">
-        <a href="#">Privacy</a>
-        <a href="#">Google Store Conditions</a>
-        <a href="#">Terms of Service</a>
-      </div>
-    </footer>
+    <footer class="main-footer">
+  <div class="footer-container">
+
+    <div class="footer-social">
+      <img src="images/icons/SM-x.svg" alt="X" />
+      <img src="images/icons/SM-instagram.svg" alt="Instagram" />
+      <img src="images/icons/SM-facebook.svg" alt="Facebook" />
+      <img src="images/icons/SM-youtube.svg" alt="YouTube" />
+      <img src="images/icons/SM-tiktok.svg" alt="TikTok" />
+    </div>
+
+    <span class="footer-country">
+      <img src="https://flagcdn.com/es.svg" alt="Spain flag" width="20" height="14" />
+      Spain
+    </span>
+
+    <div class="footer-nav">
+      <a href="#">Privacy</a>
+      <a href="#">Google Store Conditions</a>
+      <a href="#">Terms of Service</a>
+    </div>
+
+  </div>
+</footer>
 
   <script>
     function changeQty(delta) {
@@ -95,23 +114,34 @@
       if (val >= 1 && val <= 99) input.value = val;
     }
 
-      document.querySelectorAll(".swatch").forEach((swatch) => {
-        swatch.addEventListener("click", () => {
-          document
-            .querySelectorAll(".swatch")
-            .forEach((s) => s.classList.remove("selected"));
-          swatch.classList.add("selected");
-        });
+    document.querySelectorAll(".swatch").forEach((swatch) => {
+      swatch.addEventListener("click", () => {
+        document
+          .querySelectorAll(".swatch")
+          .forEach((s) => s.classList.remove("selected"));
+        swatch.classList.add("selected");
       });
+    });
 
-      document.querySelectorAll(".thumb").forEach((thumb) => {
-        thumb.addEventListener("click", () => {
-          document
-            .querySelectorAll(".thumb")
-            .forEach((t) => t.classList.remove("active"));
-          thumb.classList.add("active");
-        });
+    // Selecciona lo que hay dentro del clase "thumb", y lo cambia para que figure como la principal
+    const mainImage = document.getElementById("mainProductImage");
+    document.querySelectorAll(".thumb").forEach((thumb) => {
+      thumb.addEventListener("click", () => {
+        // Selecciona todas las miniaturas y les quita la clase "active"
+        document
+          .querySelectorAll(".thumb")
+          .forEach((t) => t.classList.remove("active"));
+        thumb.classList.add("active");
+
+        // Cambia la imagen principal
+        // Si hay un valor en en el date-image, cambia la imagen principal
+        const newImage = thumb.dataset.image;
+        if (newImage) {
+          mainImage.src = newImage;
+        }
       });
-    </script>
-  </body>
+    });
+
+  </script>
+</body>
 </html>
