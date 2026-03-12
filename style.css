@@ -1,93 +1,158 @@
 /* ── RESET ── */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Google Sans', Arial, sans-serif;
-    background: #fff;
-    color: #202124;
+  font-family: 'Google Sans', Arial, sans-serif;
+  background: #fff;
+  color: #202124;
 }
+
+/*── HEADER ── */
+header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 0 32px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.logo-google {
+  width: 40px;
+  height: 40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3c4043;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #1a73e8;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.icon-btn img {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.icon-btn:hover {
+  background-color: #f1f3f4;
+}
+
 
 /* ── NAV ── */
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 24px;
-    border-bottom: 1px solid #e0e0e0;
-    position: sticky;
-    top: 0;
-    background: #fff;
-    z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 10;
 }
 
 .nav-logo {
-    font-size: 22px;
-    font-weight: 500;
-    color: #4285f4;
-    letter-spacing: -0.5px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #4285f4;
+  letter-spacing: -0.5px;
 }
 
 .nav-logo span {
-    color: #ea4335;
+  color: #ea4335;
 }
 
 .nav-logo span:nth-child(2) {
-    color: #fbbc04;
+  color: #fbbc04;
 }
 
 .nav-logo span:nth-child(3) {
-    color: #34a853;
+  color: #34a853;
 }
 
 .nav-links {
-    display: flex;
-    gap: 28px;
-    list-style: none;
+  display: flex;
+  gap: 28px;
+  list-style: none;
 }
 
 .nav-links a {
-    text-decoration: none;
-    font-size: 14px;
-    color: #444;
+  text-decoration: none;
+  font-size: 14px;
+  color: #444;
 }
 
 .nav-links a.active {
-    color: #1a73e8;
-    border-bottom: 2px solid #1a73e8;
-    padding-bottom: 2px;
+  color: #1a73e8;
 }
 
 .nav-icons {
-    display: flex;
-    gap: 16px;
-    font-size: 20px;
-    color: #555;
+  display: flex;
+  gap: 16px;
+  font-size: 20px;
+  color: #555;
 }
 
 .nav-icons span {
-    cursor: pointer;
+  cursor: pointer;
 }
-
-/* --- BODYIZQUIERDO: volver con el arrow  --- */
 
 /* ── BACK LINK ── */
 .back-link {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 16px 40px;
-    font-size: 13px;
-    color: #0a0a0a;
-    cursor: pointer;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 40px;
+  font-size: 13px;
+  color: #0a0a0a;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .back-link:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* ── PRODUCT LAYOUT ── */
@@ -149,33 +214,33 @@ nav {
 
 /* ── RIGHT: product info ── */
 .product-info {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    max-width: 340px;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 340px;
+  width: 100%;
 }
 
 .product-category {
-    font-size: 13px;
-    color: #5f6368;
+  font-size: 13px;
+  color: #5f6368;
 }
 
 .product-title {
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 1.2;
-    color: #202124;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #202124;
 }
 
 .product-price-top {
-    font-size: 18px;
-    color: #202124;
+  font-size: 18px;
+  color: #202124;
 }
 
 .divider {
-    border: none;
-    border-top: 1px solid #e0e0e0;
+  border: none;
+  border-top: 1px solid #e0e0e0;
 }
 
 /* ── COLOR SELECTOR ── */
