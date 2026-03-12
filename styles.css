@@ -101,7 +101,6 @@ body {
 /* ── S2: CUERPO IZQUIERDO (Galería) ── */
 .product-gallery {
   display: flex;
-  /*flex: 10;*/
   gap: 20px;
 }
 
