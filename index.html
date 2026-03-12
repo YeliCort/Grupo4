@@ -33,20 +33,20 @@
     </div>
   </header>
 
-  <a class="back-link" href="#">← See product details</a>
+    <a class="back-link" href="#">← See product details</a>
 
-  <div class="product-container">
-    <div class="product-gallery">
-      <div class="thumbnails">
-        <div class="thumb active">🎧</div>
-        <div class="thumb">🔵</div>
-        <div class="thumb">⚫</div>
-        <div class="thumb">📦</div>
+    <div class="product-container">
+      <div class="product-gallery">
+        <div class="thumbnails">
+          <div class="thumb active">🎧</div>
+          <div class="thumb">🔵</div>
+          <div class="thumb">⚫</div>
+          <div class="thumb">📦</div>
+        </div>
+        <div class="main-image">
+          <div class="product-emoji">🎧</div>
+        </div>
       </div>
-      <div class="main-image">
-        <div class="product-emoji">🎧</div>
-      </div>
-    </div>
 
     <div class="product-info">
       <p class="product-category">Music &amp; Sound</p>
@@ -78,15 +78,15 @@
     </div>
   </div>
 
-  <footer>
-    <div>🌐 📱 🎵 📘 📷 ▶️</div>
-    <span>Spain</span>
-    <div class="footer-links">
-      <a href="#">Privacy</a>
-      <a href="#">Google Store Conditions</a>
-      <a href="#">Terms of Service</a>
-    </div>
-  </footer>
+    <footer>
+      <div>🌐 📱 🎵 📘 📷 ▶️</div>
+      <span>Spain</span>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Google Store Conditions</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </footer>
 
   <script>
     function changeQty(delta) {
@@ -95,20 +95,23 @@
       if (val >= 1 && val <= 99) input.value = val;
     }
 
-    document.querySelectorAll(".swatch").forEach((swatch) => {
-      swatch.addEventListener("click", () => {
-        document.querySelectorAll(".swatch").forEach((s) => s.classList.remove("selected"));
-        swatch.classList.add("selected");
+      document.querySelectorAll(".swatch").forEach((swatch) => {
+        swatch.addEventListener("click", () => {
+          document
+            .querySelectorAll(".swatch")
+            .forEach((s) => s.classList.remove("selected"));
+          swatch.classList.add("selected");
+        });
       });
-    });
 
-    document.querySelectorAll(".thumb").forEach((thumb) => {
-      thumb.addEventListener("click", () => {
-        document.querySelectorAll(".thumb").forEach((t) => t.classList.remove("active"));
-        thumb.classList.add("active");
+      document.querySelectorAll(".thumb").forEach((thumb) => {
+        thumb.addEventListener("click", () => {
+          document
+            .querySelectorAll(".thumb")
+            .forEach((t) => t.classList.remove("active"));
+          thumb.classList.add("active");
+        });
       });
-    });
-  </script>
-
-</body>
+    </script>
+  </body>
 </html>
