@@ -76,7 +76,8 @@ nav {
   margin: 0 auto;
 }
 
-/* ── LEFT: thumbnails + main image ── */
+/* ────────────────────── BODYIZQUIERDO: thumbnails + main image ────────────────────── */
+
 .product-gallery {
   display: flex;
   flex: 1;
@@ -94,14 +95,15 @@ nav {
   height: 52px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
   background: #f8f9fa;
-  font-size: 20px;
+  object-fit: cover;
+  padding: 4px;
 }
-.thumb.active { border-color: #1a73e8; }
+
+.thumb.active {
+  border-color: #1a73e8;
+}
 
 .main-image {
   flex: 1;
@@ -112,7 +114,14 @@ nav {
   justify-content: center;
   min-height: 360px;
 }
-.main-image .product-emoji { font-size: 130px; }
+
+.main-image img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+/* ────────────────────── FIN DEL BODYIZQUIERDO ────────────────────── */
 
 /* ── RIGHT: product info ── */
 .product-info {
