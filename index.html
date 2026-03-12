@@ -1,116 +1,146 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Google Pixel Buds Pro</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <nav>
-      <div class="nav-logo">
-        <span>G</span><span>o</span><span>o</span>gle Store
-      </div>
-      <ul class="nav-links">
-        <li><a href="#">Phones</a></li>
-        <li><a href="#" class="active">Earbuds</a></li>
-        <li><a href="#">Watches</a></li>
-        <li><a href="#">Smart Home</a></li>
-        <li><a href="#">Accessories</a></li>
-        <li><a href="#">Subscriptions</a></li>
-      </ul>
-      <div class="nav-icons">
-        <span>🔍</span><span>🌐</span><span>👤</span><span>🛒</span>
-      </div>
-    </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Pixel Buds Pro - Google Store</title>
 
-    <a class="back-link" href="#">← See product details</a>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <div class="product-container">
-      <div class="product-gallery">
-        <div class="thumbnails">
-          <div class="thumb active">🎧</div>
-          <div class="thumb">🔵</div>
-          <div class="thumb">⚫</div>
-          <div class="thumb">📦</div>
+    <!-- Estilos consolidados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ============================================
+         S1: HEADER (Por: Compañero 1)
+    ============================================ -->
+    <header class="main-header">
+        <nav class="nav-container" aria-label="Navegación principal">
+            <div class="logo">
+                <img src="images/google-logo.png" alt="Google Logo">
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#">Phones</a></li>
+                <li><a href="#" class="active">Earbuds</a></li>
+                <li><a href="#">Watches</a></li>
+                <li><a href="#">Smart Home</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Subscriptions</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <span>🔍</span>
+                <span>🛒</span>
+                <span>👤</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Enlace de retorno -->
+        <a class="back-link" href="#">← See product details</a>
+
+        <div class="product-container">
+            
+            <!-- ============================================
+                 S2: BODY IZQUIERDO - GALERÍA (Por: Compañero 2)
+            ============================================ -->
+            <section class="product-gallery">
+                <div class="thumbnails">
+                    <div class="thumb active" data-img="🎧">🎧</div>
+                    <div class="thumb" data-img="🔵">🔵</div>
+                    <div class="thumb" data-img="⚫">⚫</div>
+                    <div class="thumb" data-img="📦">📦</div>
+                </div>
+                <div class="main-image">
+                    <div class="product-emoji" id="current-emoji">🎧</div>
+                </div>
+            </section>
+
+            <!-- ============================================
+                 S3: BODY DERECHO - INFO Y COMPRA (Por: Usuario/Yo)
+            ============================================ -->
+            <section class="product-info">
+                <p class="product-category">Music & Sound</p>
+                <h1 class="product-title">Google Pixel Buds Pro</h1>
+                <p class="product-price-top">229 €</p>
+                
+                <hr class="divider">
+                
+                <div class="color-selection">
+                    <p class="color-label">Choose a color</p>
+                    <div class="color-swatches">
+                        <div class="swatch sky selected" title="Sky"></div>
+                        <div class="swatch porcelain" title="Porcelain"></div>
+                        <div class="swatch dark" title="Charcoal"></div>
+                        <div class="swatch fog" title="Fog"></div>
+                        <div class="swatch lemongrass" title="Lemongrass"></div>
+                        <div class="swatch coral" title="Coral"></div>
+                    </div>
+                </div>
+
+                <div class="purchase-card">
+                    <p class="price-large">229 €</p>
+                    <hr class="divider">
+                    
+                    <div class="cart-row">
+                        <div class="qty-selector-container">
+                            <select id="qty" class="qty-select">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                        <button class="btn-cart">Add to Cart</button>
+                    </div>
+
+                    <p class="delivery-info">
+                        🚚 Delivery: 29 Apr to <a href="#">08023</a>
+                    </p>
+                </div>
+            </section>
         </div>
-        <div class="main-image">
-          <div class="product-emoji">🎧</div>
-        </div>
-      </div>
+    </main>
 
-      <div class="product-info">
-        <p class="product-category">Music &amp; Sound</p>
-        <h1 class="product-title">Google Pixel Buds Pro</h1>
-        <p class="product-price-top">229 €</p>
-        <hr class="divider" />
-        <div>
-          <p class="color-label">Choose a color</p>
-          <div class="color-swatches">
-            <div class="swatch sky selected"></div>
-            <div class="swatch porcelain"></div>
-            <div class="swatch dark"></div>
-            <div class="swatch fog"></div>
-            <div class="swatch lemongrass"></div>
-            <div class="swatch coral"></div>
-          </div>
+    <!-- ============================================
+         S4: FOOTER (Por: Compañero 4)
+    ============================================ -->
+    <footer class="main-footer">
+        <div class="footer-icons">🌐 📱 🎵 📘 📷 ▶️</div>
+        <div class="footer-bottom">
+            <span>Spain</span>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Google Store Conditions</a>
+                <a href="#">Terms of Service</a>
+            </div>
         </div>
-      <div class="purchase-card">
-        <p class="price-large">229 €</p>
-        <hr class="divider" />
-        
-        <div class="cart-row">
-          <div class="qty-selector-container">
-            <select id="qty" class="qty-select">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
-          </div>
-          <button class="btn-cart">Add to Cart</button>
-        </div>
-
-        <p class="delivery-info">
-          🚚 Delivery: 29 Apr to <a href="#">08023</a>
-        </p>
-      </div>
-    </div> 
-  </div>
-
-    <footer>
-      <div>🌐 📱 🎵 📘 📷 ▶️</div>
-      <span>Spain</span>
-      <div class="footer-links">
-        <a href="#">Privacy</a>
-        <a href="#">Google Store Conditions</a>
-        <a href="#">Terms of Service</a>
-      </div>
     </footer>
 
+    <!-- Lógica de interacción -->
     <script>
-      function changeQty(delta) {
-        const input = document.getElementById("qty");
-        const val = parseInt(input.value) + delta;
-        if (val >= 1 && val <= 99) input.value = val;
-      }
-
-      document.querySelectorAll(".swatch").forEach((swatch) => {
-        swatch.addEventListener("click", () => {
-          document
-            .querySelectorAll(".swatch")
-            .forEach((s) => s.classList.remove("selected"));
-          swatch.classList.add("selected");
+        // Cambio de imágenes (Miniaturas)
+        document.querySelectorAll(".thumb").forEach((thumb) => {
+            thumb.addEventListener("click", () => {
+                document.querySelectorAll(".thumb").forEach((t) => t.classList.remove("active"));
+                thumb.classList.add("active");
+                document.getElementById("current-emoji").innerText = thumb.getAttribute("data-img");
+            });
         });
-      });
 
-      document.querySelectorAll(".thumb").forEach((thumb) => {
-        thumb.addEventListener("click", () => {
-          document
-            .querySelectorAll(".thumb")
-            .forEach((t) => t.classList.remove("active"));
-          thumb.classList.add("active");
+        // Selección de color
+        document.querySelectorAll(".swatch").forEach((swatch) => {
+            swatch.addEventListener("click", () => {
+                document.querySelectorAll(".swatch").forEach((s) => s.classList.remove("selected"));
+                swatch.classList.add("selected");
+            });
         });
-      });
     </script>
-  </body>
+</body>
 </html>
