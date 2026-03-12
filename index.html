@@ -1,126 +1,162 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Google Pixel Buds Pro</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Pixel Buds Pro - Google Store</title>
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos consolidados (Premium) -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <nav>
-    <div class="nav-logo">
-      <span>G</span><span>o</span><span>o</span>gle Store
-    </div>
-    <ul class="nav-links">
-      <li><a href="#">Phones</a></li>
-      <li><a href="#" class="active">Earbuds</a></li>
-      <li><a href="#">Watches</a></li>
-      <li><a href="#">Smart Home</a></li>
-      <li><a href="#">Accessories</a></li>
-      <li><a href="#">Subscriptions</a></li>
-    </ul>
-    <div class="nav-icons">
-      <span>🔍</span><span>🌐</span><span>👤</span><span>🛒</span>
-    </div>
-  </nav>
 
-  <a class="back-link" href="#">
-    <img class="icon" src="./images/icons/Arrow-Flecha.svg" alt="arrow" />
-    See product details
-  </a>
+    <!-- ============================================
+         S1: HEADER (Diseño Premium)
+    ============================================ -->
+    <header class="main-header">
+        <nav class="nav-container" aria-label="Navegación principal">
+            <div class="logo">
+                <img src="images/google-logo.png" alt="Google Logo">
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#">Phones</a></li>
+                <li><a href="#" class="active">Earbuds</a></li>
+                <li><a href="#">Watches</a></li>
+                <li><a href="#">Smart Home</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Subscriptions</a></li>
+            </ul>
 
-  <div class="product-container">
-    <div class="product-gallery">
-      <div class="thumbnails">
-        <img src="./images/earbuds/earbuds_01.png" class="thumb active" data-image="./images/earbuds/earbuds_01.png">
-        <img src="./images/earbuds/earbuds_02.png" class="thumb" data-image="./images/earbuds/earbuds_02.png">
-        <img src="./images/earbuds/earbuds_03.png" class="thumb" data-image="./images/earbuds/earbuds_03.png">
-        <img src="./images/earbuds/earbuds_04.png" class="thumb" data-image="./images/earbuds/earbuds_04.png">
-      </div>
+            <div class="nav-icons">
+                <span>🔍</span>
+                <span>🌐</span>
+                <span>👤</span>
+                <span>🛒</span>
+            </div>
+        </nav>
+    </header>
 
-      <div class="main-image">
-        <img id="mainProductImage" src="./images/earbuds/earbuds_01.png" alt="principal">
-      </div>
-    </div>
+    <main class="container">
+        <!-- Enlace de retorno (con el icono del equipo) -->
+        <a class="back-link" href="#">
+            <img src="./images/icons/Arrow-Flecha.svg" alt="arrow">
+            See product details
+        </a>
 
-    <div class="product-info">
-      <p class="product-category">Music &amp; Sound</p>
-      <h1 class="product-title">Google Pixel Buds Pro</h1>
-      <p class="product-price-top">229 €</p>
-      <hr class="divider" />
-      <div>
-        <p class="color-label">Choose a color</p>
-        <div class="color-swatches">
-          <div class="swatch sky selected"></div>
-          <div class="swatch dark"></div>
-          <div class="swatch sage"></div>
-          <div class="swatch mint"></div>
-          <div class="swatch coral"></div>
+        <div class="product-container">
+            
+            <!-- ============================================
+                 S2: GALERÍA (Con imágenes reales del equipo)
+            ============================================ -->
+            <section class="product-gallery">
+                <div class="thumbnails">
+                    <img src="./images/earbuds/earbuds_01.png" class="thumb active" data-img="./images/earbuds/earbuds_01.png" alt="Vista 1">
+                    <img src="./images/earbuds/earbuds_02.png" class="thumb" data-img="./images/earbuds/earbuds_02.png" alt="Vista 2">
+                    <img src="./images/earbuds/earbuds_03.png" class="thumb" data-img="./images/earbuds/earbuds_03.png" alt="Vista 3">
+                    <img src="./images/earbuds/earbuds_04.png" class="thumb" data-img="./images/earbuds/earbuds_04.png" alt="Vista 4">
+                </div>
+                <div class="main-image">
+                    <img id="current-img" src="./images/earbuds/earbuds_01.png" alt="principal">
+                </div>
+            </section>
+
+            <!-- ============================================
+                 S3: INFO Y COMPRA (Diseño Premium)
+            ============================================ -->
+            <section class="product-info">
+                <p class="product-category">Music & Sound</p>
+                <h1 class="product-title">Google Pixel Buds Pro</h1>
+                <p class="product-price-top">229 €</p>
+                
+                <hr class="divider">
+                
+                <div class="color-selection">
+                    <p class="color-label">Choose a color</p>
+                    <div class="color-swatches">
+                        <div class="swatch sky selected" title="Sky"></div>
+                        <div class="swatch dark" title="Charcoal"></div>
+                        <div class="swatch porcelain" title="Porcelain"></div>
+                        <div class="swatch fog" title="Fog"></div>
+                        <div class="swatch lemongrass" title="Lemongrass"></div>
+                        <div class="swatch coral" title="Coral"></div>
+                    </div>
+                </div>
+
+                <div class="purchase-card">
+                    <p class="price-large">229 €</p>
+                    <hr class="divider">
+                    
+                    <div class="cart-row">
+                        <div class="qty-selector-container">
+                            <select id="qty" class="qty-select">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                        <button class="btn-cart">Add to Cart</button>
+                    </div>
+
+                    <p class="delivery-info">
+                        🚚 Delivery: 29 Apr to <a href="#">08023</a>
+                    </p>
+                </div>
+            </section>
         </div>
-      </div>
-      <p class="price-large">229 €</p>
-      <div class="cart-row">
-        <div class="qty-box">
-          <button onclick="changeQty(-1)">−</button>
-          <input type="number" id="qty" value="1" min="1" max="99" />
-          <button onclick="changeQty(1)">+</button>
+    </main>
+
+    <!-- ============================================
+         S4: FOOTER (Con iconos y links del equipo)
+    ============================================ -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-social">
+                <img src="images/icons/SM-x.svg" alt="X" width="20">
+                <img src="images/icons/SM-instagram.svg" alt="Instagram" width="20">
+                <img src="images/icons/SM-facebook.svg" alt="Facebook" width="20">
+                <img src="images/icons/SM-youtube.svg" alt="YouTube" width="20">
+                <img src="images/icons/SM-tiktok.svg" alt="TikTok" width="20">
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-country">
+                    <img src="https://flagcdn.com/es.svg" alt="Spain flag" width="18"> Spain
+                </span>
+                <div class="footer-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Google Store Conditions</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
         </div>
-        <button class="btn-cart">Add to Cart</button>
-      </div>
-      <p class="delivery-info">
-        🚚 Delivery: 29 Apr to <a href="#">39003</a>
-      </p>
-    </div>
-  </div>
+    </footer>
 
-  <footer>
-    <div>🌐 📱 🎵 📘 📷 ▶️</div>
-    <span>Spain</span>
-    <div class="footer-links">
-      <a href="#">Privacy</a>
-      <a href="#">Google Store Conditions</a>
-      <a href="#">Terms of Service</a>
-    </div>
-  </footer>
+    <!-- Lógica de interacción -->
+    <script>
+        // Cambio de imágenes (Miniaturas)
+        document.querySelectorAll(".thumb").forEach((thumb) => {
+            thumb.addEventListener("click", () => {
+                document.querySelectorAll(".thumb").forEach((t) => t.classList.remove("active"));
+                thumb.classList.add("active");
+                const newSrc = thumb.getAttribute("data-img");
+                document.getElementById("current-img").src = newSrc;
+            });
+        });
 
-  <script>
-    function changeQty(delta) {
-      const input = document.getElementById("qty");
-      const val = parseInt(input.value) + delta;
-      if (val >= 1 && val <= 99) input.value = val;
-    }
-
-    document.querySelectorAll(".swatch").forEach((swatch) => {
-      swatch.addEventListener("click", () => {
-        document
-          .querySelectorAll(".swatch")
-          .forEach((s) => s.classList.remove("selected"));
-        swatch.classList.add("selected");
-      });
-    });
-
-    // Selecciona lo que hay dentro del clase "thumb", y lo cambia para que figure como la principal
-    const mainImage = document.getElementById("mainProductImage");
-    document.querySelectorAll(".thumb").forEach((thumb) => {
-      thumb.addEventListener("click", () => {
-        // Selecciona todas las miniaturas y les quita la clase "active"
-        document
-          .querySelectorAll(".thumb")
-          .forEach((t) => t.classList.remove("active"));
-        thumb.classList.add("active");
-
-        // Cambia la imagen principal.
-        // Si hay un valor en en el date-image, cambia la imagen principal.
-        const newImage = thumb.dataset.image;
-        if (newImage) {
-          mainImage.src = newImage;
-        }
-      });
-    });
-
-  </script>
+        // Selección de color
+        document.querySelectorAll(".swatch").forEach((swatch) => {
+            swatch.addEventListener("click", () => {
+                document.querySelectorAll(".swatch").forEach((s) => s.classList.remove("selected"));
+                swatch.classList.add("selected");
+            });
+        });
+    </script>
 </body>
-
 </html>
