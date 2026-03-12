@@ -20,3 +20,10 @@ Sigue estos pasos para instalar el proyecto en tu equipo:
 ```bash
 git clone https://github.com/YeliCort/Grupo4.git
 cd Grupo4
+```
+## 👥 Autores
+En este proyecto aplicamos la metodología **Scrum** para organizar nuestras tareas y entregas:
+- **Product Owner:** [Yeli](https://github.com/YeliCort) - Encargado de definir los requisitos y objetivos de la Google Store.
+- **Scrum Master:** [Lia](https://github.com/Fer-Lia) - Facilitadora del equipo, encargada de que el flujo de trabajo sea ágil y sin bloqueos.
+- **Developers:** [Dorien](https://github.com/Dorienbyte) - Diseño en Figma y Body
+- **Developers:**  [Jass](https://github.com/Jass2501) - Diseño Maquetación CSS y Body
