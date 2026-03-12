@@ -78,10 +78,10 @@ nav {
   margin: 0 auto;
 }
 
-/* ────────────────────── BODYIZQUIERDO: thumbnails + main image ────────────────────── */
 
+/* ── BODYIZQUIERDO: thumbnails + main image ── */
 .product-gallery {
-  display: flex;
+  display: flex; /* Coloca las miniaturas a lado de la imagen principal*/
   flex: 1;
   gap: 16px;
 }
@@ -126,7 +126,6 @@ nav {
   object-fit: contain;
 }
 
-/* ────────────────────── FIN DEL BODYIZQUIERDO ────────────────────── */
 
 /* ── RIGHT: product info ── */
 .product-info {

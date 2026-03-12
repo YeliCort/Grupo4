@@ -26,7 +26,6 @@
     </div>
   </nav>
 
-  <!--- MI PARTE LADO IZQUIERDO -->
   <a class="back-link" href="#">
     <img class="icon" src="./images/icons/Arrow-Flecha.svg" alt="arrow" />
     See product details
@@ -45,9 +44,6 @@
         <img id="mainProductImage" src="./images/earbuds/earbuds_01.png" alt="Producto">
       </div>
     </div>
-
-
-    <!-- FIN DE MI PARTE -->
 
     <div class="product-info">
       <p class="product-category">Music &amp; Sound</p>
@@ -105,8 +101,7 @@
       });
     });
 
-    // Thumbnails → cambiar imagen principal
-    // Selecciona lo que hay dentro del clase "thumb"
+    // Selecciona lo que hay dentro del clase "thumb", y lo cambia para que figure como la principal
     const mainImage = document.getElementById("mainProductImage");
     document.querySelectorAll(".thumb").forEach((thumb) => {
       thumb.addEventListener("click", () => {
@@ -124,6 +119,7 @@
         }
       });
     });
+
   </script>
 </body>
 
