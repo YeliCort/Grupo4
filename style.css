@@ -368,32 +368,38 @@ nav {
 }
 
 /* ── FOOTER ── */
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 40px;
-    border-top: 1px solid #e0e0e0;
-    font-size: 12px;
-    color: #80868b;
-    flex-wrap: wrap;
-    gap: 8px;
+.main-footer {
+  border-top: 1px solid var(--color-light-gray);
+  padding: 24px 0;
+  margin-top: 60px;
 }
 
-.footer-links {
-    display: flex;
-    gap: 16px;
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
 }
 
-.footer-links a {
-    color: #80868b;
-    text-decoration: none;
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
+.footer-social img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 
+.footer-country {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--color-gray);
+}
 /* ── MOBILE-FIRST BASE ── */
 .product-container {
   flex-direction: column;

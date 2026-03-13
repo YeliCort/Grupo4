@@ -127,19 +127,17 @@
       });
     });
 
-    // Selecciona lo que hay dentro del clase "thumb", y lo cambia para que figure como la principal
+     principal
     const mainImage = document.getElementById("mainProductImage");
     document.querySelectorAll(".thumb").forEach((thumb) => {
       thumb.addEventListener("click", () => {
-        // Selecciona todas las miniaturas y les quita la clase "active"
+       
         document
           .querySelectorAll(".thumb")
           .forEach((t) => t.classList.remove("active"));
         thumb.classList.add("active");
 
-        // Cambia la imagen principal
-        // Si hay un valor en en el date-image, cambia la imagen principal
-        const newImage = thumb.dataset.image;
+                const newImage = thumb.dataset.image;
         if (newImage) {
           mainImage.src = newImage;
         }
