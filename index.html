@@ -127,17 +127,19 @@
       });
     });
 
-     principal
+    // Selecciona lo que hay dentro del clase "thumb", y lo cambia para que figure como la principal
     const mainImage = document.getElementById("mainProductImage");
     document.querySelectorAll(".thumb").forEach((thumb) => {
       thumb.addEventListener("click", () => {
-       
+
         document
           .querySelectorAll(".thumb")
           .forEach((t) => t.classList.remove("active"));
         thumb.classList.add("active");
 
-                const newImage = thumb.dataset.image;
+        // Cambia la imagen principal
+        // Si hay un valor en en el date-image, cambia la imagen principal
+        const newImage = thumb.dataset.image;
         if (newImage) {
           mainImage.src = newImage;
         }
