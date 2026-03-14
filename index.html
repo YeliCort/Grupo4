@@ -112,41 +112,36 @@
   </footer>
 
   <script>
-    function changeQty(delta) {
-      const input = document.getElementById("qty");
-      const val = parseInt(input.value) + delta;
-      if (val >= 1 && val <= 99) input.value = val;
-    }
+  function changeQty(delta) {
+    const input = document.getElementById("qty");
+    const val = parseInt(input.value) + delta;
+    if (val >= 1 && val <= 99) input.value = val;
+  }
 
-    document.querySelectorAll(".swatch").forEach((swatch) => {
-      swatch.addEventListener("click", () => {
-        document
-          .querySelectorAll(".swatch")
-          .forEach((s) => s.classList.remove("selected"));
-        swatch.classList.add("selected");
-      });
+  document.querySelectorAll(".swatch").forEach((swatch) => {
+    swatch.addEventListener("click", () => {
+      document
+        .querySelectorAll(".swatch")
+        .forEach((s) => s.classList.remove("selected"));
+      swatch.classList.add("selected");
     });
+  });
 
-    // Selecciona lo que hay dentro del clase "thumb", y lo cambia para que figure como la principal
-    const mainImage = document.getElementById("mainProductImage");
-    document.querySelectorAll(".thumb").forEach((thumb) => {
-      thumb.addEventListener("click", () => {
+  const mainImage = document.getElementById("mainProductImage");
+  document.querySelectorAll(".thumb").forEach((thumb) => {
+    thumb.addEventListener("click", () => {
+      document
+        .querySelectorAll(".thumb")
+        .forEach((t) => t.classList.remove("active"));
+      thumb.classList.add("active");
 
-        document
-          .querySelectorAll(".thumb")
-          .forEach((t) => t.classList.remove("active"));
-        thumb.classList.add("active");
-
-        // Cambia la imagen principal
-        // Si hay un valor en en el date-image, cambia la imagen principal
-        const newImage = thumb.dataset.image;
-        if (newImage) {
-          mainImage.src = newImage;
-        }
-      });
+      const newImage = thumb.dataset.image;
+      if (newImage) {
+        mainImage.src = newImage;
+      }
     });
-
-  </script>
+  });
+</script>
 </body>
 
 </html>
