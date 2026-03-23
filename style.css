@@ -296,6 +296,19 @@ nav {
     color: #202124;
 }
 
+/* Quitar flechas en Chrome, Edge, Safari */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Quitar flechas en Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
 /* ── CART ROW ── */
 .cart-row {
     display: flex;
