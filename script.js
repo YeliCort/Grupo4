@@ -83,7 +83,9 @@ cartIcon.addEventListener("click", function () {
     return;
   } else {
 
-    let mensaje = "Los productos seleccionados:\n\n";
+    mensaje = "Los productos seleccionados:\n\n";
+    let mensajetotal = "";
+    let sumatotal = 0;
 
     for (let i = 0; i < cart.length; i++) {
 
@@ -92,10 +94,14 @@ cartIcon.addEventListener("click", function () {
       const nombre = partes[1];
       const color = partes[2];
       const precio = partes[3];
-      mensaje += `- ${cantidad} ${nombre} de color ${color}: ${precio}\n`;
-      mensaje +=`Total: ${total}\n`
+      const convCant = parseInt(cantidad);
+      const convprecio = parseFloat(precio);
+      const segunCantidad = convCant * convprecio;
+      sumatotal += segunCantidad;
+      mensaje += `- ${cantidad} ${nombre} de color ${color}: ${precio}/unidad: \n Precio según unidad:${segunCantidad}€ \n\n`;
+      mensajetotal = `\n Total ${sumatotal}€`;
     }
-    alert(mensaje);
+    alert(mensaje + mensajetotal);
   }
 });
 
