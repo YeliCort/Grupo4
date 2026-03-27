@@ -48,7 +48,7 @@ function changeQty(amount) {
 // CONTENIDO DEL CARRITO
 
 let cartText = localStorage.getItem("cart");
-let cart = cartText ? cartText.split("|") : [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let selectedColor = "";
 const productName = document.querySelector("h1").textContent;
 
@@ -59,16 +59,23 @@ const quantitySelect = document.getElementById("qty");
 
 addCartBtn.addEventListener("click", function () {
   const quantity = quantitySelect.value;
-  const precio = document.querySelector(".product-price-top").textContent;
+  const Textprice = document.querySelector(".product-price-top").textContent;
+  const price = parseFloat(Textprice.replace(/[^0-9.]/g,""))
 
   if (selectedColor === "") {
     alert("Debe de seleccionar un color para añadir al carrito.");
     return;
   } else {
-    const itemText = `${quantity},${productName},${selectedColor},${precio}`;
-    cart.push(itemText);
-    localStorage.setItem("cart", cart.join("|"));
+    const itemObj = {
+      cantidad: parseInt(quantity),
+      nombre: productName,
+      color: selectedColor,
+      precio: price,
+    };
+    cart.push(itemObj);
+    localStorage.setItem("cart", JSON.stringify(cart));
     alert(`Se añadió ${quantity} ${productName} de color ${selectedColor}.`);
+    console.log("Carrito actual:", cart); 
   }
 });
 
@@ -89,16 +96,10 @@ cartIcon.addEventListener("click", function () {
 
     for (let i = 0; i < cart.length; i++) {
 
-      const partes = cart[i].split(",");
-      const cantidad = partes[0];
-      const nombre = partes[1];
-      const color = partes[2];
-      const precio = partes[3];
-      const convCant = parseInt(cantidad);
-      const convprecio = parseFloat(precio);
-      const segunCantidad = convCant * convprecio;
+      const item = cart[i];
+      const segunCantidad = item.cantidad * item.precio;
       sumatotal += segunCantidad;
-      mensaje += `- ${cantidad} ${nombre} de color ${color}: ${precio}/unidad: \n Precio según unidad:${segunCantidad}€ \n\n`;
+      mensaje += `- ${item.cantidad} ${item.nombre} de color ${item.color}: ${item.precio}€/unidad: \n Precio según unidad:${segunCantidad}€ \n\n`;
       mensajetotal = `\n Total ${sumatotal}€`;
     }
     alert(mensaje + mensajetotal);
